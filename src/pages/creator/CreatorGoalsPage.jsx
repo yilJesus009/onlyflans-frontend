@@ -25,6 +25,7 @@ export default function CreatorGoalsPage() {
   };
 
   const onDelete = async (id) => {
+    if (!window.confirm('¿Seguro que quieres eliminar esta meta?')) return;
     await deleteCreatorGoal(id);
     loadGoals();
   };

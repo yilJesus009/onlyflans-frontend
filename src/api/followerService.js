@@ -49,3 +49,8 @@ export const getDonationHistory = async (params) => {
   const { data } = await http.get('/donacion/historial', { params });
   return data;
 };
+
+export const getAllCreators = async () => {
+    const { data } = await http.get('/seguidor/creadores');
+    return data;
+};

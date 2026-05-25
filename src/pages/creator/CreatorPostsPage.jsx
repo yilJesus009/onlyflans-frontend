@@ -32,6 +32,7 @@ export default function CreatorPostsPage() {
   };
 
   const onDelete = async (id) => {
+    if (!window.confirm('¿Seguro que quieres eliminar este post?')) return;
     await deleteCreatorPost(id);
     loadPosts();
   };

@@ -68,7 +68,10 @@ export default function CreatorPublicPage() {
           )}
         </div>
         <div className="p-5">
-          <h2 className="text-2xl font-black text-ink">{creator?.nombre}</h2>
+        <div className="-mt-10 h-20 w-20 overflow-hidden rounded-lg border-4 border-white bg-flan"> {creator?.perfil?.fotoPerfil && (
+          <img className="h-full w-full object-cover" src={uploadUrl(creator.perfil.fotoPerfil)} alt="Foto de perfil" />)}
+        </div>
+          <h2 className="mt-3 text-2xl font-black text-ink">{creator?.nombre}</h2>
           <p className="mt-2 max-w-3xl text-sm leading-6 text-stone-600">{creator?.perfil?.descripcion}</p>
           <div className="mt-4 flex flex-wrap gap-2">
             <Button variant="outline" onClick={onFavorite}>Agregar a favoritos</Button>
