@@ -23,7 +23,7 @@ export const getUnlockedPosts = async (creadorId) => {
 export const createComment = async ({ postId, texto }) => {
   const { data } = await http.post('/donacion/comentario', { postId, texto });
   return data;
-};
+}; 
 
 export const getFavorites = async () => {
   const { data } = await http.get('/seguidor/favoritos');

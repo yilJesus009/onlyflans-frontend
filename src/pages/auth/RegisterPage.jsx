@@ -68,22 +68,7 @@ export default function RegisterPage() {
           <Input id="password" type="password" autoComplete="new-password" {...register('password')} />
           {errors.password && <span className="field-error">{errors.password.message}</span>}
         </div>
-        <fieldset>
-          <legend className="mb-2 text-sm font-medium text-stone-700">Tipo de cuenta</legend>
-          <div className="grid gap-3 sm:grid-cols-2">
-            <label className="cursor-pointer rounded-lg border border-stone-200 p-3">
-              <input className="mr-2" type="radio" value="follower" {...register('role')} />
-              <span className="font-semibold">Seguidor</span>
-              <p className="mt-1 text-xs text-stone-500">Explora, dona flanes y comenta.</p>
-            </label>
-            <label className="cursor-pointer rounded-lg border border-stone-200 p-3">
-              <input className="mr-2" type="radio" value="creator" {...register('role')} />
-              <span className="font-semibold">Creador</span>
-              <p className="mt-1 text-xs text-stone-500">Publica posts, metas y reportes.</p>
-            </label>
-          </div>
-          {errors.role && <span className="field-error">{errors.role.message}</span>}
-        </fieldset>
+        
         <Button type="submit" variant="accent" className="w-full" disabled={isSubmitting}>
           <UserPlus size={18} />
           Registrarme

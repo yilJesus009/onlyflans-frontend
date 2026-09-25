@@ -15,8 +15,7 @@ import {
 import { uploadUrl } from '../../utils/media.js';
 
 export default function CreatorPostsPage() {
-  const [posts, setPosts] = useState([]);
-  const [comments, setComments] = useState({});
+   const [comments, setComments] = useState({});
   const { register, handleSubmit, reset, formState: { isSubmitting } } = useForm();
 
   const loadPosts = async () => setPosts(await getCreatorPosts());
